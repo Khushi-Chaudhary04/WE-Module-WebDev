@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Khushi Chaudhary</title>
+        <meta name="author" content="Khushi Chaudhary">
+        <meta name="color-scheme" content="light dark">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+            }
+
+            h1, h2 {
+                cursor: pointer;
+            }
+
+            .collapsible + p, .collapsible + section {
+                display: none;
+            }
+
+            #toc {
+                background-color: #f4f4f4;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+
+            #toc h2 {
+                font-size: 1.5rem;
+            }
+
+            #toc ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+            #toc ul li {
+                margin: 5px 0;
+            }
+
+            #toc ul li a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            #toc ul li a:hover {
+                text-decoration: underline;
+            }
+        </style>
+        <script>
+            // JavaScript for Collapsing Sections
+            document.addEventListener('DOMContentLoaded', function() {
+                const collapsibles = document.querySelectorAll('.collapsible');
+
+                collapsibles.forEach(function(collapsible) {
+                    collapsible.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        const content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                });
+            });
+
+            // JavaScript for Generating Table of Contents
+            document.addEventListener('DOMContentLoaded', function() {
+                const tocList = document.getElementById('toc-list');
+                const headers = document.querySelectorAll('h1, h2');
+
+                headers.forEach(function(header) {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.textContent = header.textContent;
+                    link.href = `#${header.id}`;
+                    listItem.appendChild(link);
+                    tocList.appendChild(listItem);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Table of Contents -->
+        <nav id="toc">
+            <h2>Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </nav>
+
+        <!-- Main content sections -->
+        <section>
+            <h1 id="top-level-1" class="collapsible">Khushi Chaudhary</h1>
+            <p>Khushi Chaudhary is an aspiring computer engineer with a passion for sustainability, technology, and innovation. She is currently pursuing a degree in Computer Engineering at Mumbai University and is an active contributor to various projects and initiatives.</p>
+        </section>
+
+        <section>
+            <h1 id="top-level-2" class="collapsible">Early Life and Education</h1>
+            <section>
+                <h2 id="subheading-2.1" class="collapsible">Education</h2>
+                <p>Khushi is pursuing her Bachelor's degree in Computer Engineering at Terna Engineering College, Mumbai University, with a CGPA of 8.36. She completed her higher secondary education from Jindal Vidya Mandir, Vasind, achieving 84.2%, and secured 94% in her secondary school certificate from the same institution.</p>
+            </section>
+        </section>
+
+        <section>
+            <h1 id="top-level-3" class="collapsible">Career and Projects</h1>
+            <section>
+                <h2 id="subheading-3.1" class="collapsible">Projects</h2>
+                <p>Khushi has worked on multiple impactful projects, including IntelliScript, a video transcript summarization tool using AI, and a Python-based Face Recognition System with MySQL integration.</p>
+            </section>
+            <section>
+                <h2 id="subheading-3.2" class="collapsible">Internships</h2>
+                <p>She has interned as a Flask Rest API Developer at CoRider, where she developed robust APIs using MongoDB, Flask, and Python.</p>
+            </section>
+        </section>
+
+        <section>
+            <h1 id="top-level-4" class="collapsible">Skills and Interests</h1>
+            <section>
+                <h2 id="subheading-4.1" class="collapsible">Programming Languages</h2>
+                <p>Khushi is highly skilled in Python and has a working knowledge of JavaScript, HTML, CSS, C, Scala, and Java. She is also proficient in MySQL, data analysis, and version control systems.</p>
+            </section>
+        </section>
+
+        <section>
+            <h1 id="top-level-5" class="collapsible">Achievements</h1>
+            <section>
+                <h2 id="subheading-5.1" class="collapsible">Women Engineer Program by TalentSprint</h2>
+                <p>Selected among the top 200 students from over 22,000 nationwide applicants for the Women Engineer Program supported by Google.</p>
+            </section>
+            <section>
+                <h2 id="subheading-5.2" class="collapsible">Google Immersion Week</h2>
+                <p>Attended Google Immersion Week and developed a Python Cloud Function for movie success prediction in BigQuery, among other projects.</p>
+            </section>
+        </section>
+
+        <section>
+            <h1 id="top-level-6" class="collapsible">Future Goals</h1>
+            <p>Khushi aims to make significant contributions to the fields of software engineering, AI, and sustainability through innovative projects that positively impact the world.</p>
+        </section>
+    </body>
+</html>
